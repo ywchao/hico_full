@@ -27,11 +27,12 @@ echo "Creating train lmdb..."
 
 echo "Creating test lmdb..."
 
+# Don't shuffle for the test set. Otherwise it will cause problems in the 
+# current evaluation script
 ./external/caffe/build/tools/convert_imageset \
     --resize_width=256 \
     --resize_height=256 \
     --encoded=true \
-    --shuffle \
     $HICO_TEST_DIR \
     ./data/hico_file_list_test.txt \
     $HICO_TEST_LMDB

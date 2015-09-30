@@ -1,6 +1,6 @@
 import sys
 import os
-caffe_root = '../external/caffe'
+caffe_root = './external/caffe'
 sys.path.insert(0, os.path.join(caffe_root, 'python'))
 
 import numpy as np
@@ -17,8 +17,8 @@ def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 print 'prepare net'
-net = caffe.Net('../models/hico_test.prototxt',
-                '../models/hico_iter_200000.caffemodel',
+net = caffe.Net('./models/hico_test.prototxt',
+                './models/hico_iter_40000.caffemodel',
                 caffe.TEST)
 
 print 'start'
@@ -34,4 +34,4 @@ for i in xrange(0,num):
     print np.where(score > 0.5)
     print i
 
-sio.savemat('test-result.mat', {'all_score':all_score})
+sio.savemat('data/test-result.mat', {'all_score':all_score})

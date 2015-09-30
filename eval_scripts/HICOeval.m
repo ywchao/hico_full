@@ -1,8 +1,8 @@
 clc;
 clear all;
-anno_file = '/scratch/jiadeng_fluxg/shared/hico_20150920/anno.mat';
+anno_file = './external/hico_20150920/anno.mat';
 anno = load(anno_file);
-resf = load('./test-result.mat');
+resf = load('./data/test-result.mat');
 backend = 'test'
 
 num_class = 600;

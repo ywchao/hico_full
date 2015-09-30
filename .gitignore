@@ -7,3 +7,7 @@ data/hico_test/
 
 # external
 external
+
+# caffe model
+*.caffemodel
+*.solverstate

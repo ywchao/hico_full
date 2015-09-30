@@ -23,5 +23,7 @@
   matlab -r "get_hico_file_list"
   ./convert_dataset.sh
   ./train.sh
+  python eval_scripts/HICOeval_getmat.py
+  matlab -r "HICOeval"
   </pre>
 
