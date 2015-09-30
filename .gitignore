@@ -1,0 +1,9 @@
+*.log
+*.txt
+
+# lmdb
+data/hico_train/
+data/hico_test/
+
+# external
+external

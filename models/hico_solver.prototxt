@@ -1,5 +1,5 @@
 net: "models/hico_train_val.prototxt"
-test_iter: 733
+test_iter: 763
 test_interval: 1000
 # lr for fine-tuning should be lower than when starting from scratch
 base_lr: 0.0001

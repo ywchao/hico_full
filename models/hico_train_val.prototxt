@@ -1,4 +1,4 @@
-name: "HICOAlex"
+name: "HICOCaffeNet"
 layer {
   name: "data"
   # here use data layer because we have lmdb
@@ -309,7 +309,8 @@ layer {
   type: "InnerProduct"
   bottom: "fc6"
   top: "fc7"
-  # Note that lr_mult can be set to 0 to disable any fine-tuning of this, and any other, layer
+  # Note that lr_mult can be set to 0 to disable any fine-tuning of this, and 
+  # any other, layer
   param {
     lr_mult: 0
     decay_mult: 1
@@ -345,13 +346,14 @@ layer {
     dropout_ratio: 0.5
   }
 }
-#the name should be changed, or else it will get weights from pre-trained model
+# The name should be changed, or else it will get weights from pre-trained model
 layer {
   name: "fc8_hico"
   type: "InnerProduct"
   bottom: "fc7"
   top: "fc8"
-  # lr_mult is set to higher than for other layers, because this layer is starting from random while the others are already trained
+  # lr_mult is set to higher than for other layers, because this layer is 
+  # starting from random while the others are already trained
   param {
     lr_mult: 1
     decay_mult: 1
